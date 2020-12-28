@@ -44,10 +44,9 @@ binoculars or a small telescope.
 %doc README.md COPYING CREDITS.md
 %{_bindir}/%{name}
 %{_datadir}/%{name}
-#{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man1/*.1.*
-#{_datadir}/applications/%{name}.desktop
-#{_datadir}/pixmaps/%{name}.xpm
+%{_datadir}/applications/org.stellarium.Stellarium.desktop
+%{_datadir}/metainfo/org.stellarium.Stellarium.appdata.xml
 %{_iconsdir}/hicolor/*/apps/%{name}.*
 
