@@ -2,7 +2,7 @@
 %define title	Stellarium
 
 Name:		stellarium 
-Version:	0.21.3
+Version:	0.22.1
 Release:	1
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
