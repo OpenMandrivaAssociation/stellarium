@@ -12,6 +12,7 @@ Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/
 BuildRequires:  cmake
 BuildRequires:  gettext
 BuildRequires:  cmake(Qt5LinguistTools)
+BuildRequires:  pkgconfig(Qt5Charts)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Help)
 BuildRequires:  pkgconfig(Qt5Multimedia)
