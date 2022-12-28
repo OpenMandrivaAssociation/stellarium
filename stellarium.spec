@@ -10,6 +10,8 @@ License:	GPLv2+
 URL:		http://www.stellarium.org
 Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.xz
 BuildRequires:  cmake
+BuildRequires:	cmake(qt6)
+BuildRequires:	qmake-qt6
 BuildRequires:  gettext
 BuildRequires:  cmake(Qt6LinguistTools)
 BuildRequires:  cmake(Qt6Charts)
