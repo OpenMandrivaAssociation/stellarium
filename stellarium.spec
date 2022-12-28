@@ -39,7 +39,7 @@ binoculars or a small telescope.
 %setup -q
 
 %build 
-%cmake_qt6
+%cmake
 %make_build
 
 %install
