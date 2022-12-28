@@ -2,28 +2,30 @@
 %define title	Stellarium
 
 Name:		stellarium 
-Version:	0.22.2
+Version:	1.2
 Release:	1
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
 License:	GPLv2+
 URL:		http://www.stellarium.org
-Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.xz
 BuildRequires:  cmake
 BuildRequires:  gettext
-BuildRequires:  cmake(Qt5LinguistTools)
-BuildRequires:  pkgconfig(Qt5Charts)
-BuildRequires:  pkgconfig(Qt5Concurrent)
-BuildRequires:  pkgconfig(Qt5Help)
-BuildRequires:  pkgconfig(Qt5Multimedia)
-BuildRequires:  pkgconfig(Qt5MultimediaWidgets)
-BuildRequires:  pkgconfig(Qt5OpenGL)
-BuildRequires:  pkgconfig(Qt5Positioning)
-BuildRequires:  pkgconfig(Qt5PrintSupport)
-BuildRequires:  pkgconfig(Qt5Script)
-BuildRequires:  pkgconfig(Qt5SerialPort)
-BuildRequires:  pkgconfig(Qt5Test)
-BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:  cmake(Qt6LinguistTools)
+BuildRequires:  cmake(Qt6Charts)
+BuildRequires:  cmake(Qt6Concurrent)
+BuildRequires:  cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Help)
+BuildRequires:  cmake(Qt6Multimedia)
+BuildRequires:  cmake(Qt6MultimediaWidgets)
+BuildRequires:  cmake(Qt6OpenGL)
+BuildRequires:  cmake(Qt6Positioning)
+BuildRequires:  cmake(Qt6PrintSupport)
+BuildRequires:  cmake(Qt6SerialPort)
+BuildRequires:  cmake(Qt6Test)
+BuildRequires:  cmake(Qt6WebEngineCore)
+BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  pkgconfig(zlib)
 
 %description
@@ -35,7 +37,7 @@ binoculars or a small telescope.
 %setup -q
 
 %build 
-%cmake_qt5
+%cmake_qt6
 %make_build
 
 %install
