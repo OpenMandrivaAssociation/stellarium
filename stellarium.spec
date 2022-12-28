@@ -34,6 +34,7 @@ BuildRequires:  cmake(Qt6WebEngineCore)
 BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  cmake(VulkanHeaders)
 BuildRequires:  pkgconfig(opengl)
+BuildRequires:  pkgconfig(glu)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(xkbcommon-x11)
 BuildRequires:  pkgconfig(xkbcommon)
@@ -47,8 +48,8 @@ binoculars or a small telescope.
 %setup -q
 
 %build 
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake
 %make_build
 
