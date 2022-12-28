@@ -47,6 +47,8 @@ binoculars or a small telescope.
 %setup -q
 
 %build 
+export CC=gcc
+export CXX=g++
 %cmake
 %make_build
 
