@@ -50,7 +50,7 @@ binoculars or a small telescope.
 %build 
 #export CC=gcc
 #export CXX=g++
-%cmake
+%cmake -DENABLE_SHOWMYSKY=no
 %make_build
 
 %install
