@@ -33,6 +33,8 @@ BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6Positioning)
 BuildRequires:	cmake(Qt6WebChannel)
 BuildRequires:	cmake(Qt6WebEngineCore)
+BuildRequires:	pkgconfig(xcb-xkb)
+BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(zlib)
 
 %description
