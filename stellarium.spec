@@ -12,6 +12,7 @@ Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/
 BuildRequires:  cmake
 BuildRequires:	ninja
 BuildRequires:  gettext
+BuildRequires:	cmake(Qt6)
 BuildRequires:  cmake(Qt6LinguistTools)
 BuildRequires:  cmake(Qt6Charts)
 BuildRequires:  cmake(Qt6Concurrent)
