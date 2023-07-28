@@ -13,6 +13,10 @@ BuildRequires:  cmake
 BuildRequires:	ninja
 BuildRequires:  gettext
 BuildRequires:	cmake(Qt6)
+BuildRequires:	cmake(Qt6Core)
+BUildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6DBus)
 BuildRequires:  cmake(Qt6LinguistTools)
 BuildRequires:  cmake(Qt6Charts)
 BuildRequires:  cmake(Qt6Concurrent)
