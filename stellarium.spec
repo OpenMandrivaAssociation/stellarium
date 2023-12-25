@@ -35,7 +35,9 @@ BuildRequires:	cmake(Qt6WebChannel)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(vulkan)
 BuildRequires:  pkgconfig(zlib)
+BuildRequires:	qt6-qtbase-theme-gtk3
 
 %description
 Stellarium renders 3D photo-realistic skies in real time. 
