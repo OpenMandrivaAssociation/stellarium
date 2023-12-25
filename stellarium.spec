@@ -2,7 +2,7 @@
 %define title	Stellarium
 
 Name:		stellarium 
-Version:	23.3
+Version:	23.4
 Release:	1
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
@@ -14,7 +14,7 @@ BuildRequires:	ninja
 BuildRequires:  gettext
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
-BUildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6DBus)
 BuildRequires:  cmake(Qt6LinguistTools)
