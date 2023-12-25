@@ -1,4 +1,4 @@
-
+%global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
 %define title	Stellarium
 
 Name:		stellarium 
