@@ -39,6 +39,8 @@ BuildRequires:  pkgconfig(vulkan)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:	qt6-qtbase-theme-gtk3
 
+Requires:  	%{_lib}nlopt
+
 %description
 Stellarium renders 3D photo-realistic skies in real time. 
 With stellarium, you really see what you can see with your eyes,
