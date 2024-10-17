@@ -7,7 +7,7 @@ Release:	1
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
 License:	GPLv2+
-URL:		http://www.stellarium.org
+URL:		https://www.stellarium.org
 Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:	ninja
