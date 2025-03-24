@@ -35,6 +35,7 @@ BuildRequires:	cmake(Qt6Positioning)
 BuildRequires:	cmake(Qt6WebChannel)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(ShowMySky-Qt6)
+BuildRequires:	cmake(QXlsxQt6)
 BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(vulkan)
@@ -50,15 +51,9 @@ Stellarium renders 3D photo-realistic skies in real time.
 With stellarium, you really see what you can see with your eyes,
 binoculars or a small telescope.
 
-%install -a
-# Forgotten by cmake files
-mkdir -p %{buildroot}%{_libdir}
-cp -a _OMV_rpm_build/_deps/qxlsxqt6-build/libQXlsxQt6.so.* %{buildroot}%{_libdir}/
-
 %files
 %doc README.md COPYING CREDITS.md
 %{_bindir}/%{name}
-%{_libdir}/libQXlsxQt6.so.*
 %{_datadir}/%{name}
 %{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man1/*.1.*
