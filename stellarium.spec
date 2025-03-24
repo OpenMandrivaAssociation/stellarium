@@ -44,6 +44,7 @@ BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(vulkan)
 BuildRequires:  pkgconfig(zlib)
+BuildRequires:	libnova-devel
 
 Requires:  	%{_lib}nlopt
 
