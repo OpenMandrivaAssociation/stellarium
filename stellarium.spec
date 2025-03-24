@@ -10,6 +10,7 @@ License:	GPLv2+
 URL:		https://www.stellarium.org
 Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildSystem:	cmake
+BuildOption:	-DCPM_USE_LOCAL_PACKAGES:BOOL=yes
 BuildRequires:	ninja
 BuildRequires:  gettext
 BuildRequires:	cmake(Qt6)
@@ -50,18 +51,17 @@ With stellarium, you really see what you can see with your eyes,
 binoculars or a small telescope.
 
 %install -a
-# Missing install rules in the CMake files...
-cp -a _OMV_rpm_build/_deps/qxlsxqt6-build/libQXlsxQt6.so* %{buildroot}%{_libdir}/
+# Forgotten by cmake files
+mkdir -p %{buildroot}%{_libdir}
+cp -a _OMV_rpm_build/_deps/qxlsxqt6-build/libQXlsxQt6.so.* %{buildroot}%{_libdir}/
 
 %files
 %doc README.md COPYING CREDITS.md
 %{_bindir}/%{name}
-%{_libdir}/libShowMySky-Qt6.so*
-%{_libdir}/libQXlsxQt6.so*
+%{_libdir}/libQXlsxQt6.so.*
 %{_datadir}/%{name}
 %{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man1/*.1.*
 %{_datadir}/applications/org.stellarium.Stellarium.desktop
 %{_datadir}/metainfo/org.stellarium.Stellarium.appdata.xml
 %{_iconsdir}/hicolor/*/apps/%{name}.*
-
