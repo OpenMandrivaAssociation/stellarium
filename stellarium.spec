@@ -2,14 +2,14 @@
 %define title	Stellarium
 
 Name:		stellarium 
-Version:	24.4
+Version:	25.1
 Release:	1
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
 License:	GPLv2+
 URL:		https://www.stellarium.org
 Source0:	https://github.com/Stellarium/stellarium/releases/download/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:  cmake
+BuildSystem:	cmake
 BuildRequires:	ninja
 BuildRequires:  gettext
 BuildRequires:	cmake(Qt6)
@@ -37,26 +37,20 @@ BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(vulkan)
 BuildRequires:  pkgconfig(zlib)
-BuildRequires:	qt6-qtbase-theme-gtk3
 
 Requires:  	%{_lib}nlopt
+
+%patchlist
+stellarium-25.1-qt-6.9.patch
 
 %description
 Stellarium renders 3D photo-realistic skies in real time. 
 With stellarium, you really see what you can see with your eyes,
 binoculars or a small telescope.
 
-%prep 
-%setup -q
-%cmake -G Ninja
-
-%build 
-%ninja_build -C build
-
-%install
-%ninja_install -C build
+%install -a
 # Missing install rules in the CMake files...
-cp -a build/_deps/qxlsxqt6-build/libQXlsxQt6.so* %{buildroot}%{_libdir}/
+cp -a _OMV_rpm_build/_deps/qxlsxqt6-build/libQXlsxQt6.so* %{buildroot}%{_libdir}/
 
 %files
 %doc README.md COPYING CREDITS.md

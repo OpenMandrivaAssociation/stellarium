@@ -1,0 +1,33 @@
+diff -up stellarium-25.1/src/gui/AngleSpinBox.cpp.omv~ stellarium-25.1/src/gui/AngleSpinBox.cpp
+--- stellarium-25.1/src/gui/AngleSpinBox.cpp.omv~	2025-03-24 14:19:25.611776410 +0100
++++ stellarium-25.1/src/gui/AngleSpinBox.cpp	2025-03-24 14:23:23.713867021 +0100
+@@ -510,24 +510,24 @@ QSize AngleSpinBox::minimumSizeHint() co
+ 		{
+ 			if (angleSpinBoxFormat == DMSLetters || angleSpinBoxFormat == DMSLettersUnsigned)
+ 				refText = QString("%1%2d %3m %4s").arg(signPlaceholder).arg(359).arg(59)
+-				                                  .arg(0, 0, 'f', decimalPlaces, ' ');
++				                                  .arg(0.0f, 0, 'f', decimalPlaces, ' ');
+ 			else
+ 				refText = QString("%1%2° %3' %4\"").arg(signPlaceholder).arg(359).arg(59)
+-				                                   .arg(0, 0, 'f', decimalPlaces, ' ');
++				                                   .arg(0.0f, 0, 'f', decimalPlaces, ' ');
+ 			break;
+ 		}
+ 		case HMSLetters:
+ 		case HMSSymbols:
+ 		{
+ 			if (angleSpinBoxFormat == HMSLetters)
+-				refText = QString("%1h %2m %3s").arg(23).arg(59).arg(0, 0, 'f', decimalPlaces, ' ');
++				refText = QString("%1h %2m %3s").arg(23).arg(59).arg(0.0f, 0, 'f', decimalPlaces, ' ');
+ 			else
+-				refText = QString("%1h %2' %3\"").arg(23).arg(59).arg(0, 0, 'f', decimalPlaces, ' ');
++				refText = QString("%1h %2' %3\"").arg(23).arg(59).arg(0.0f, 0, 'f', decimalPlaces, ' ');
+ 			break;
+ 		}
+ 		case DecimalDeg:
+ 		{
+-			refText = QString("%1%2°").arg(signPlaceholder).arg(360, 0, 'f', decimalPlaces, ' ');
++			refText = QString("%1%2°").arg(signPlaceholder).arg(360.0f, 0, 'f', decimalPlaces, ' ');
+ 			break;
+ 		}
+ 		default:
