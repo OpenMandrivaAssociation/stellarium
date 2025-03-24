@@ -37,6 +37,7 @@ BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(ShowMySky-Qt6)
 BuildRequires:	cmake(QXlsxQt6)
 BuildRequires:	cmake(md4c)
+BuildRequires:	pkgconfig(md4c-html)
 BuildRequires:	pkgconfig(xcb-xkb)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(vulkan)
@@ -46,6 +47,7 @@ Requires:  	%{_lib}nlopt
 
 %patchlist
 stellarium-25.1-qt-6.9.patch
+stellarium-25.1-system-md4c.patch
 
 %description
 Stellarium renders 3D photo-realistic skies in real time. 
