@@ -50,7 +50,7 @@ Requires:  	%{_lib}nlopt
 
 %patchlist
 #stellarium-25.1-qt-6.9.patch
-stellarium-25.1-system-md4c.patch
+#stellarium-25.1-system-md4c.patch
 
 %description
 Stellarium renders 3D photo-realistic skies in real time. 
