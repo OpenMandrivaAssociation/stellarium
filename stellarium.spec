@@ -3,7 +3,7 @@
 
 Name:		stellarium 
 Version:	25.3
-Release:	1
+Release:	2
 Summary:	Desktop planetarium 
 Group:		Sciences/Astronomy
 License:	GPLv2+
