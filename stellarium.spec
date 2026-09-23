@@ -42,6 +42,8 @@ BuildRequires:	cmake(NLopt)
 BuildRequires:	cmake(md4c)
 BuildRequires:	pkgconfig(md4c-html)
 BuildRequires:	pkgconfig(libindi)
+# libindi/libastro.h includes libnova headers; indi-devel does not require them.
+BuildRequires:	libnova-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(libgps)
 BuildRequires:	pkgconfig(xcb-xkb)
