@@ -2,7 +2,7 @@
 %define title	Stellarium
 
 Name:		stellarium
-Version:	26.2
+Version:	26.3
 Release:	1
 Summary:	Desktop planetarium
 Group:		Sciences/Astronomy
@@ -53,9 +53,6 @@ BuildRequires:	pkgconfig(zlib)
 
 # Loaded with QLibrary, so the ELF dependency generator does not see it.
 Requires:	%{_lib}CalcMySky
-
-%patchlist
-stellarium-26.2-qt6.10-guiprivate.patch
 
 %description
 Stellarium renders 3D photo-realistic skies in real time.
